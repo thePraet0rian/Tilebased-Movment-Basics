@@ -4,7 +4,7 @@
 ## The Player Scene:
 
 
-![](/res/player_scene.png)
+![](/res/player_scn.png)
 
 The player scene is made up of:
 - A character body.

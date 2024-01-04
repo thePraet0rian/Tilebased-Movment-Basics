@@ -39,8 +39,19 @@ func player_input() -> void:
 		input_direction.y = Input.get_axis("ui_up", "ui_down")
 	
 	next_step = input_direction * tile_size
+	
 	ray_cast.target_position = next_step
 	ray_cast.force_raycast_update()
+	
+	if Input.is_action_pressed("ui_select"):
+		
+		is_running = true
+		walk_speed = 12
+	else:
+		
+		is_running = false
+		walk_speed = 6
+	
 	
 	if not ray_cast.is_colliding():
 		if input_direction != Vector2.ZERO:

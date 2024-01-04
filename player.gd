@@ -8,29 +8,21 @@ extends CharacterBody2D
 const tile_size: int = 16
 var walk_speed: int = 6
 
-var inital_position: Vector2 = Vector2.ZERO
+var inital_position: Vector2 = position
 var input_direction: Vector2 = Vector2.ZERO
-var previous_position: Vector2 = Vector2.ZERO
 
 var is_moving: bool = false
-var running: bool = false
+var is_running: bool = false
 var percent_moved: float = 0.0
-
-
-func _ready() -> void:
-	
-	inital_position = position
-	previous_position = inital_position
 
 
 func _physics_process(delta: float) -> void:
 	
 	if not is_moving: 
 		player_input()
-	elif is_moving and input_direction != Vector2.ZERO:
+	elif is_moving:
 		move(delta)
-	else:
-		is_moving = false
+
 	
 	animation()
 
@@ -80,7 +72,7 @@ func animation() -> void:
 		anim_tree.set("parameters/run/blend_position", input_direction)
 		anim_tree.set("parameters/walk/blend_position", input_direction)
 		
-		if running:
+		if is_running:
 			
 			anim_tree_properties.travel("run")
 		else:

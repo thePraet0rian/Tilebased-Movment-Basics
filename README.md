@@ -164,3 +164,26 @@ How to setup animations:
 3. You enter all frames you want set the time and set it to loop.
 
 ![](/res/animation.png)
+
+- When your finished with all the animations you want you make an animation_tree
+
+
+How to setup animtrees:
+
+1. You set the tree root to AnimationNodeStateMachine
+2. You set the anim_player to the one you use before to make animations
+3. You set it to active
+
+![](/res/animation_2.png)
+
+4. You use the + icon to create 3 boxes name them with the arrow icon and connect them with the third arrow icon
+5. You click on the pencil next to the name.
+
+6. You use the pencil icon to make a shape like this and enter your animations. 
+Note: Top and Bottom are switched.
+7. You set the blend mode to discrete (The 3 dots)
+
+![](/res/animation_3.png)
+
+##If you have any questions just join the discord.
+![My discord](https://discord.gg/pRAdRp9uEv)

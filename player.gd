@@ -1,4 +1,4 @@
-class_name player extends CharacterBody2D
+extends CharacterBody2D
 
 
 @onready var ray_cast: RayCast2D = $collision_raycast
@@ -6,7 +6,6 @@ class_name player extends CharacterBody2D
 @onready var anim_tree_properties = $anim_tree.get("parameters/playback")
 
 const tile_size: int = 16
-
 var walk_speed: int = 6
 
 var inital_position: Vector2 = Vector2.ZERO

@@ -174,9 +174,12 @@ How to setup animtrees:
 2. You set the anim_player to the one you use before to make animations
 3. You set it to active
 
-![](/res/animation_2.png)
+![](/res/animation_4.png)
 
 4. You use the + icon to create 3 boxes name them with the arrow icon and connect them with the third arrow icon
+
+![](/res/animation_2.png)
+
 5. You click on the pencil next to the name.
 
 6. You use the pencil icon to make a shape like this and enter your animations. 

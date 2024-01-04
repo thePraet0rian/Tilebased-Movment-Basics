@@ -17,7 +17,7 @@ The player scene is made up of:
 ## The Player Script:
 
 
-You start the script by telling godot that this is a characterbody and you reference all the important nodes.
+####You start the script by telling godot that this is a characterbody and you reference all the important nodes.
 
 ```
 extends CharacterBody2D
@@ -27,14 +27,14 @@ extends CharacterBody2D
 @onready var anim_tree_properties = $anim_tree.get("parameters/playback")
 ```
 
-You set the tile_size and walkspeed for your game which in this case are 16x16 and 6.
+####You set the tile_size and walkspeed for your game which in this case are 16x16 and 6.
 
 ```
 const tile_size: int = 16
 var walk_speed: int = 6
 ```
 
-You make five variables:
+####You make five variables:
 
 - inital_position: this is the players position before he walks
 - input_direction: this is the direction you want to go
@@ -52,7 +52,7 @@ var is_running: bool = false
 var percent_moved: float = 0.0
 ```
 
-You make the physics_process function this function runs 60 times per second:
+####You make the physics_process function this function runs 60 times per second:
 
 1. If the player hasn't input anything he is not moving so player_input() executes
 2. If the player has input something move(delta) executes
@@ -69,7 +69,7 @@ func _physics_process(delta: float) -> void:
 	animation()
 ```
 
-You make the variable next_step and the function player_input():
+####You make the variable next_step and the function player_input():
 
 - To ensure that the player does not move diagonaly you have two if statements, that check whether or not the other input_direction is 0
 - input_direction: get_axis, if both actions are pressed this returns 0 so the player does not move if the first one is pressed it returns -1 if the other action is pressed it returns +1.
@@ -109,7 +109,7 @@ func player_input() -> void:
 ```
 
 
-You make to move(delta) funtion.
+####You make to move(delta) funtion.
 
 - percent_moved is set to the walk_speed * delta, delta is the time since the last frame
 - you check whether or not percent_moved is over 100% if it is you set is_moving to false, the position to the position your supposed to have and reset the percent_moved variable to 0.0
@@ -132,7 +132,7 @@ func move(delta: float) -> void:
 
 ```
 
-You make the animation function()
+####You make the animation function()
 
 - if the input_direction isn't 0 you set the blend positions of the animation_tree
 - you check whether you are running or walking and then travel to the state you want
@@ -158,7 +158,7 @@ func animation() -> void:
 		anim_tree_properties.travel("idle")
 ```
 
-How to setup animations:
+####How to setup animations:
 
 1. You press the "Animation" button then click new and enter a name.
 2. Then you click on your sprite node, go to the animation property, select a frame and then press the key next to it

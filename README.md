@@ -63,7 +63,7 @@ You make the physics_process function this function runs 60 times per second:
 func _physics_process(delta: float) -> void:
 
     if not is_moving: 
-	    player_input()
+        player_input()
     elif is_moving:
         move(delta)
 	

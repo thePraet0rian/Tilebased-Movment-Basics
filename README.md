@@ -82,6 +82,8 @@ You make the variable next_step and the function player_input():
 
 ```
 
+var next_step: Vector2
+
 func player_input() -> void:
 	
 	if input_direction.y == 0:

@@ -41,7 +41,7 @@ You make five variables:
 - input_direction: this is the direction you want to go
 - is_moving: this is whether or not you are moving
 - is_running: this is whether or not you are running or walking
-- percent_moved: this is how much you have already moved in the direction you want do go
+- percent_moved: this is how much you have already moved in the direction you want to go
 
 
 ```
@@ -63,9 +63,9 @@ You make the physics_process function this function runs 60 times per second:
 func _physics_process(delta: float) -> void:
 
     if not is_moving: 
-		player_input()
-	elif is_moving:
-		move(delta)
+	    player_input()
+    elif is_moving:
+        move(delta)
 	
 	animation()
 ```

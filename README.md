@@ -86,29 +86,29 @@ var next_step: Vector2
 
 func player_input() -> void:
 	
-	if input_direction.y == 0:
-		input_direction.x = Input.get_axis("ui_left", "ui_right")
-	if input_direction.x == 0:
-		input_direction.y = Input.get_axis("ui_up", "ui_down")
+    if input_direction.y == 0:
+        input_direction.x = Input.get_axis("ui_left", "ui_right")
+    if input_direction.x == 0:
+        input_direction.y = Input.get_axis("ui_up", "ui_down")
 	
-	next_step = input_direction * tile_size
+    next_step = input_direction * tile_size
+
+    ray_cast.target_position = next_step
+    ray_cast.force_raycast_update()
 	
-	ray_cast.target_position = next_step
-	ray_cast.force_raycast_update()
-	
-	if Input.is_action_pressed("ui_select"):
-		is_running = true
-		walk_speed = 12
-	else:
-		is_running = false
-		walk_speed = 6
+    if Input.is_action_pressed("ui_select"):
+        is_running = true
+        walk_speed = 12
+    else:
+        is_running = false
+        walk_speed = 6
 	
 	
-	if not ray_cast.is_colliding():
-		if input_direction != Vector2.ZERO:
+    if not ray_cast.is_colliding():
+        if input_direction != Vector2.ZERO:
 			
-			inital_position = position
-			is_moving = true
+            inital_position = position
+            is_moving = true
 ```
 
 You make to move(delta) funtion.
@@ -120,17 +120,17 @@ You make to move(delta) funtion.
 ```
 func move(delta: float) -> void:
 	
-	percent_moved += walk_speed * delta
+    percent_moved += walk_speed * delta
 	
-	if percent_moved >= 1.0:
+    if percent_moved >= 1.0:
 		
-		position = inital_position + next_step
-		percent_moved = 0.0
-		is_moving = false
+        position = inital_position + next_step
+        percent_moved = 0.0
+        is_moving = false
 	
-	else:
+    else:
 		
-		position = inital_position + (tile_size * input_direction * percent_moved)
+        position = inital_position + (tile_size * percent_moved)
 
 ```
 

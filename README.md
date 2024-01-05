@@ -189,4 +189,4 @@ Note: Top and Bottom are switched.
 ![](/res/animation_3.png)
 
 ## If you have any questions just join the discord.
-![My discord](https://discord.gg/pRAdRp9uEv)
+[My discord](https://discord.gg/pRAdRp9uEv)

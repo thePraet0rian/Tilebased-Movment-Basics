@@ -12,6 +12,7 @@ The player scene is made up of:
 - A ray_cast for collisions.
 - An animation_player
 - An animation_tree
+- A camera2d
 
 
 ## The Player Script:

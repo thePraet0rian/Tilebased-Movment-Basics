@@ -143,21 +143,21 @@ You make the animation function()
 ```
 func animation() -> void:
 	
-	if input_direction != Vector2.ZERO:
+    if input_direction != Vector2.ZERO:
 		
-		anim_tree.set("parameters/idle/blend_position", input_direction)
-		anim_tree.set("parameters/run/blend_position", input_direction)
-		anim_tree.set("parameters/walk/blend_position", input_direction)
+        anim_tree.set("parameters/idle/blend_position", input_direction)
+        anim_tree.set("parameters/run/blend_position", input_direction)
+        anim_tree.set("parameters/walk/blend_position", input_direction)
 		
-		if is_running:
+        if is_running:
 			
-			anim_tree_properties.travel("run")
-		else:
+            anim_tree_properties.travel("run")
+        else:
 			
-			anim_tree_properties.travel("walk")
-	else:
+            anim_tree_properties.travel("walk")
+    else:
 		
-		anim_tree_properties.travel("idle")
+        anim_tree_properties.travel("idle")
 ```
 
 How to setup animations:

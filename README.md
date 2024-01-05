@@ -130,7 +130,7 @@ func move(delta: float) -> void:
 	
     else:
 		
-        position = inital_position + (tile_size * percent_moved)
+        position = inital_position + (next_step * percent_moved)
 
 ```
 
